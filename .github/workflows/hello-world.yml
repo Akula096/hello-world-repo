@@ -1,14 +1,12 @@
 name: Hello World
 
 on:
-   workflow_dispatch:
+   push
 
 jobs:
     hello-job:
-        concurrency:
-            group: prod
-            cancel-in-progress: true
         runs-on: ubuntu-latest
+        timeout-minutes: 1
         steps:
             - name: Echo text
               run: sleep 300
