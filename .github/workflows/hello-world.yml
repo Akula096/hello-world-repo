@@ -5,9 +5,8 @@ on:
 
 jobs:
     hello-job:
+        if: github.ref == 'refs/heads/main'
         runs-on: ubuntu-latest
-        timeout-minutes: 1
         steps:
             - name: Echo text
-              run: sleep 300
-    
+              run: echo "sathish"
