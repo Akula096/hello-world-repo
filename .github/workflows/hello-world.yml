@@ -5,7 +5,11 @@ on:
 
 jobs:
     hello-job:
+        concurrency:
+            group: prod
+            cancel-in-progress: true
         runs-on: ubuntu-latest
         steps:
             - name: Echo text
-              run: echo "Hello world!"
+              run: sleep 300
+    
