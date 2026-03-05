@@ -14,7 +14,6 @@ jobs:
         steps:
           - name: hello world
             run: |
-              sleep 300s
               echo "hello world!"
           - name: github
             run: ${{github}}
